@@ -89,7 +89,7 @@ df['premium'] = df.apply(
         ), axis = 1
 )
 
-# Step 2: Convert single premium to annual premium
+# Convert single premium to annual premium
 INTEREST_RATE = 0.03
 df['annual_premium'] = df.apply(
     lambda row: annual_premium(row['premium'], row['term'], Interest_Rate),
